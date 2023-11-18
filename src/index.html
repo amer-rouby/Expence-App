@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Css/font-awesome.css" /> 
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>webpack app</title>
+    <script type="mudule" src="/dist/main.js"></script>
+  
+  </head>
+  <body>
+    <div class="container sumsing">
+     <h2>بسم الله الرحمن الرحيم </h2>
+      <h2>اللهم افتح لي بابك ويسر لي اسبابك</h2>
+    <section class="books-content">
+      <form  class="form">
+        <div class="title">
+          <label for="#"> اسم التاجر /  جهة العمل</label>
+          <input type="text" id="title" class="form-control" />
+       <p id="error-title">  من فضلك ادخل اسم التاجر / جهةالعمل</p>
+        </div>
+        <div class="total-sum">
+          <label for="#">  حساب التاجر / جهة العمل</label>
+          <input type="number" id="expence" class="form-control" />
+        <p id="error-total-sum">من فضلك ادخل  المبلغ</p>
+        </div>
+        <div class="reseived-amount">
+          <label for="#"> المبلغ المسدد</label>
+          <input type="number" id="reseived-amount" class="form-control" />
+        <p id="error-reseived-amount">من فضلك ادخل   المبلغ المسدد </p>
+        </div>
+        <div class="auther">
+          <label for="#">الملاحظات</label>
+          <input type="text" id="auther" class="form-control" />
+         <p id="error-auther">من  فضلك ادخل   ملاحظاتك او تفاصيل  </p>
+        </div>
+        <button id="submit"" class="btn btn-primary">اضافة مصروف</button>
+      </form>
+      <table class="table">
+        <thead>
+          <th> اسم التاجر</th>
+          <th> الحساب</th>
+          <th>المسدد</th>
+          <th>المتبقي</th>
+          <th>الملاحظات</th>
+          <th></th>
+        </thead>
+        <tbody id="expense-body">
+          
+            
+        </tbody>
+      </table>
+      <div>
+        <h2 > اجمالي المصاريف  </h2>
+        <h2 id="total-expence"></h2>
+      </div>
+                <div id="overlay" class="overlay"></div>
+    </section>
+       <!-- ///////////////////////////////////// -->
+    <section class="container">
+      <header class="d-flex justify-content-center justify-content-sm-between">
+       <div class="title"> مصاريف البيت </div>
+        <div class="icon-add">
+          <span id="add-task" class="material-symbols-outlined"> add </span>
+        </div>
+      </header>
+      <div class="content-table">
+        <ul id="tasks-control"></ul>
+      </div>
+    </section>
+    </div>
+ 
+  </body>
+</html>

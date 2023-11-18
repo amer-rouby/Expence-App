@@ -1,0 +1,179 @@
+/* the first section table and form */
+body {
+  background-color: #000;
+}
+
+.sumsing h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.sumsing label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+.sumsing .books-content form {
+  width: 100%;
+  margin: auto;
+}
+.sumsing .books-content p {
+  color: red;
+  display: none;
+}
+.sumsing .books-content table {
+  margin-top: 10px !important;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.sumsing button {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sumsing thead th {
+  color: #fff !important;
+  background: #9c27b0 !important;
+}
+
+.sumsing td {
+  font-weight: bold;
+  border-radius: 2px;
+  margin: 0px;
+  border: none;
+  color: #fff;
+}
+
+.sumsing table .delete {
+  background-color: red;
+  color: #fff !important;
+  cursor: pointer;
+}
+
+.author {
+  background-color: rgb(2, 110, 110) !important;
+}
+
+/* The seconde section */
+header {
+  position: relative;
+  height: 53px;
+  background-color: rgb(9, 9, 135);
+  margin-top: 60px;
+}
+
+header .title {
+  color: #fff;
+  width: 80% !important;
+  text-align: left !important;
+  font-size: 22px;
+  font-weight: bold;
+}
+header .icon-add {
+  position: absolute;
+  bottom: 3px;
+  right: 0px;
+  margin: 5px;
+  min-width: 50% !important;
+  text-align: right;
+}
+header div span {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/* //////////////////////// */
+.content-table {
+  list-style: none !important;
+  background-color: #dad9d9;
+  min-height: 60vh;
+
+  padding: 10px;
+}
+.tasks-control {
+  min-width: 110%;
+}
+.content-table ul {
+  position: relative;
+}
+.content-table ul li {
+  background-color: #fff;
+  padding: 5px;
+  list-style: none;
+  min-width: 100%;
+  border-radius: 7px;
+}
+
+.content-icons {
+  display: flex;
+  margin: 3px !important;
+}
+.task {
+  background-color: rgb(158, 253, 160) !important;
+}
+.icons,
+.text-conten {
+  width: 50%;
+}
+.icons {
+  text-align: left;
+  margin-top: 7px;
+}
+.icons .check,
+.icons .delete,
+.icons .edit,
+.cancel {
+  padding: 5px;
+
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 8px;
+  cursor: pointer;
+}
+.done {
+  background-color: rgb(38, 180, 3);
+}
+.icons .delete {
+  background-color: rgb(96, 3, 3);
+}
+.icons .edit {
+  background-color: rgb(5, 2, 189);
+}
+.cancel {
+  background-color: rgb(118, 0, 101);
+}
+.text-conten {
+  text-align: right;
+}
+.text-conten {
+  font-size: 13px;
+}
+/*  */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #0587f1;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
