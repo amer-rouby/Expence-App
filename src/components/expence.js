@@ -12,6 +12,7 @@ import {
   submit,
   totalExpence,
   expenceBody,
+  resetAllData,
 } from "./valditon/valedationExpence";
 
 let expenceData = [];
@@ -29,6 +30,15 @@ function getBookFromStorge() {
 function storeExpence() {
   let expenceString = JSON.stringify(expenceData);
   localStorage.setItem("book", expenceString);
+}
+
+resetAllData.addEventListener("click", resetAllExpence);
+
+function resetAllExpence(e) {
+  e.preventDefault();
+  localStorage.removeItem("book");
+  expenceData = [];
+  totalSums();
 }
 //the add new expence
 let data = {};

@@ -4,6 +4,7 @@ export let expence = document.getElementById("expence");
 export let reseivedAmount = document.getElementById("reseived-amount");
 export let autherInput = document.getElementById("auther");
 export let submit = document.getElementById("submit");
+export let resetAllData = document.getElementById("reset-all");
 export let totalExpence = document.getElementById("total-expence");
 export let expenceBody = document.getElementById("expense-body");
 
@@ -11,7 +12,7 @@ export let expenceBody = document.getElementById("expense-body");
 export let titleError = document.getElementById("error-title");
 export let errorTotal = document.getElementById("error-total-sum");
 export let errorReseived = document.getElementById("error-reseived-amount");
-export let autherError = document.getElementById( "error-auther" );
+export let autherError = document.getElementById("error-auther");
 
 export const valedationInFucse = () => {
   titleInput.addEventListener("focus", () => {
