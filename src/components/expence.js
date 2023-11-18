@@ -13,7 +13,7 @@ import {
   totalExpence,
   expenceBody,
   resetAllData,
-} from "./valditon/valedationExpence";
+} from "./validation/validationExpence";
 
 let expenceData = [];
 // the Saved locale storge
