@@ -12,6 +12,9 @@ export let expenceBody = document.getElementById("expense-body");
 export let titleError = document.getElementById("error-title");
 export let errorTotal = document.getElementById("error-total-sum");
 export let errorReseived = document.getElementById("error-reseived-amount");
+export let errorReseivedChecking = document.getElementById(
+  "error-reseived-checking"
+);
 export let autherError = document.getElementById("error-auther");
 
 export const valedationInFucse = () => {
@@ -23,6 +26,9 @@ export const valedationInFucse = () => {
   });
   reseivedAmount.addEventListener("focus", () => {
     errorReseived.style.display = "none";
+  });
+  reseivedAmount.addEventListener("focus", () => {
+    errorReseivedChecking.style.display = "none";
   });
 
   autherInput.addEventListener("focus", () => {

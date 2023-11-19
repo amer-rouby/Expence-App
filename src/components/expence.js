@@ -13,9 +13,11 @@ import {
   totalExpence,
   expenceBody,
   resetAllData,
+  errorReseivedChecking,
 } from "./validation/validationExpence";
 
 let expenceData = [];
+
 // the Saved locale storge
 function getBookFromStorge() {
   let retrivedExpence = JSON.parse(localStorage.getItem("book"));
@@ -23,6 +25,10 @@ function getBookFromStorge() {
     expenceData = [];
   } else {
     expenceData = retrivedExpence;
+  }
+  //Handle btn reset
+  if (expenceData.length == 0) {
+    resetAllData.style.display = "none";
   }
   createExpence();
 }
@@ -33,16 +39,21 @@ function storeExpence() {
 }
 
 resetAllData.addEventListener("click", resetAllExpence);
-
 function resetAllExpence(e) {
   e.preventDefault();
-  localStorage.removeItem("book");
-  expenceData = [];
-  totalSums();
+
+  const isReset = confirm("هل انت متاكد من حذف المصروفات  ");
+  if (isReset) {
+    localStorage.removeItem("book");
+    expenceData = [];
+    totalSums();
+    getBookFromStorge();
+  }
 }
 //the add new expence
 let data = {};
 submit.addEventListener("click", (e) => {
+  getBookFromStorge();
   e.preventDefault();
   data = {
     title: titleInput.value,
@@ -56,7 +67,7 @@ submit.addEventListener("click", (e) => {
   if (!validationForm()) {
     return;
   }
-
+  resetAllData.style.display = "inline-block";
   createExpence();
   storeExpence();
   totalSums();
@@ -118,7 +129,7 @@ function totalSums() {
 getBookFromStorge();
 totalSums();
 //valdation form inputs
-export const validationForm = () => {
+const validationForm = () => {
   if (titleInput.value == "") {
     titleError.style.display = "block";
     return false;
@@ -129,6 +140,10 @@ export const validationForm = () => {
   }
   if (reseivedAmount.value == "") {
     errorReseived.style.display = "block";
+    return false;
+  }
+  if (+reseivedAmount.value > +expence.value) {
+    errorReseivedChecking.style.display = "block";
     return false;
   }
   if (autherInput.value == "") {
